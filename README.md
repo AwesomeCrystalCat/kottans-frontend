@@ -9,18 +9,18 @@ Git is a simple to use version control system that allows to follow the workflow
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-    Console shows which lines were changed in newer version comparing to older one. By '-' sign console shows which line was deleted and '+' stands for added line.
+Console shows which lines were changed in newer version comparing to older one. By '-' sign console shows which line was deleted and '+' stands for added line.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    It helps to control workflow and versions of a file. History help to find the exact version of the file in a short priod of time.
+It helps to control workflow and versions of a file. History help to find the exact version of the file in a short priod of time.
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
 docs does?
 
-    Pros of commit:
+Pros of commit:
 - you can break the entire workflow on convinient chunks;
 - you have easy and quik access to the workflow;
 - you can do back-up to the previous version anytime you want;
@@ -32,20 +32,20 @@ docs does?
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-    Because programming for example usualy containes many file to work with. And in one commit you can make many changes with many files that are connected to each other. So it's a good way to commit few file in single commit. By the way, you can choose wich files to commit and which don't.
+Because programming for example usualy containes many file to work with. And in one commit you can make many changes with many files that are connected to each other. So it's a good way to commit few file in single commit. By the way, you can choose wich files to commit and which don't.
 
 How can you use the commands git log and git diff to view the history of files?
 
-    Git log displays a set of revisions, so you can see how file was changed during the workflow. Git diff gives an exact information what is the difference between two chosen versions.
+Git log displays a set of revisions, so you can see how file was changed during the workflow. Git diff gives an exact information what is the difference between two chosen versions.
 
 How might using version control make you more confident to make changes that
 could break something?
 
-    You can always make a chekcout if something went wrong.
+You can always make a chekcout if something went wrong.
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-    To commit changes to the file and save the history of a workflow.
+To commit changes to the file and save the history of a workflow.
 
 What happens when you initialize a repository? Why do you need to do it?
 
@@ -85,24 +85,24 @@ Automatic merging gives ability to easily merge branches when there is no possib
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    When I afraid that my computer can shut down and stop working. It's really good idea to keep a copy of any important file you work on on the remote server just for case. Also you can use remote repository if you or your partner work on another machine on the same project, so you can share your project free. And if you want to show your project to another people. Any case it's a good idea. To create a remote repository you need to run "git remote" to check if there any remote servers and then "git remote <remote name> <remote http adress>" also you can use SSH key. To push your changes to the remote repository push you run "git push <remote name> <branch name>". To verify your remote run "git remote -v".
+When I afraid that my computer can shut down and stop working. It's really good idea to keep a copy of any important file you work on on the remote server just for case. Also you can use remote repository if you or your partner work on another machine on the same project, so you can share your project free. And if you want to show your project to another people. Any case it's a good idea. To create a remote repository you need to run "git remote" to check if there any remote servers and then "git remote <remote name> <remote http adress>" also you can use SSH key. To push your changes to the remote repository push you run "git push <remote name> <branch name>". To verify your remote run "git remote -v".
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Because automatically up-to-date can provocate a conflict or even erase your latest commits.
+Because automatically up-to-date can provocate a conflict or even erase your latest commits.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Clone is ability to copy the repository with all the history and every changes and save it on your local machine for example.. Fork is GitHub local clone feature that copies the repository on the remote side. Both of them are teamwork opportunities. Branch is an independant vector of the repository. You can work localy on your own project. 
+Clone is ability to copy the repository with all the history and every changes and save it on your local machine for example.. Fork is GitHub local clone feature that copies the repository on the remote side. Both of them are teamwork opportunities. Branch is an independant vector of the repository. You can work localy on your own project. 
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    To avoid conflicts and staying up-to-date.
+To avoid conflicts and staying up-to-date.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    It's possible to use another version control systems or clouds.
+It's possible to use another version control systems or clouds.
