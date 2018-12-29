@@ -105,6 +105,8 @@ https://git-scm.com/docs
 
 # Learn the Command Line (Codecademy course)
 
+<img src="../task_linux_cli/codecademy_cli.png" />
+
 Command Line is a way of navigation, managing derictories and running files by using keyboard only. What is much convinient and faster especially after Typing course:) Configuring CLI for your personal usage can be very helpful during workflow. One of the most popular opensource CLI is Bash what stands for Bourne-Again-Shell named for it's creator Bourne and the word game in the same time. Here are some most usable commands, that were uncovered in Codecademy course for CLI:
 
 cd - changes directory;
