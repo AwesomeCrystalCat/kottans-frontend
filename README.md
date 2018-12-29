@@ -97,7 +97,119 @@ To avoid conflicts and staying up-to-date.
 
 It's possible to use another version control systems or clouds.
 
-
-
 List of Git Commands:
 https://git-scm.com/docs
+
+
+## Linux CLI, and HTTP
+
+# Learn the Command Line (Codecademy course)
+
+Command Line is a way of navigation, managing derictories and running files by using keyboard only. What is much convinient and faster especially after Typing course:) Configuring CLI for your personal usage can be very helpful during workflow. One of the most popular opensource CLI is Bash what stands for Bourne-Again-Shell named for it's creator Bourne and the word game in the same time. Here are some most usable commands, that were uncovered in Codecademy course for CLI:
+
+cd - changes directory;
+ls - list all files and directories;
+ls -a - -a flag modifies ls command and shows hidden files and directories, they starts with dot;
+ls -l - -l option modifies ls command and shows files and directories in a long format;
+ls -l - -t option modifies ls command and shows files and directories in a order they were last modified;
+ls -alt - -alt option is combination of previous operations;
+pwd - prints the working directory;
+mkdir - creates a directory;
+touch - creates a file;
+echo - write a text message;
+cat - command output of the file to the terminal;
+cp - copies content of one file to another or copies file or directory from one directory to another;
+mv - moves file or directory from one directory to anotother or moves content from one file to another what in fact renames the file;
+rm - removes file;
+rm -r - -r option stands for recursive modifies rm command and allows to remove the directory and files permanently;
+wc - couns lines, words and characters;
+sort - sorts content of the file;
+uniq - outputs unique strings in file;
+grep -  stands for global regular expression print search file for line that match the pattern and output the result. It's case sensetive unless you use -i option which stands for ignoring case;
+grep -R - searches all files in a directory and outputs filenames and lines containing matched results;
+grep -Rl - searches all files in a directory and outputs only filenames;
+sed - stream editor that finds and replace needed text; ine the expressions of sed 's/text/another_text/' s stands for substitution from the 'text' that is searching and replacing it with another_text. It will change only the first instance of the line unless you using 's/text/another_text/g' where g stands for global and make changes to the all matches.
+
+Using * (which stands for 42 in the ASCII tables) means you can replace the astrisk with any symbol. So you can apply to find all file that ends with *.txt extention.
+
+Pro tip: to make your operation quiklier you can type only begginig of the name then push Tab button for autofilling;
+
+stdin - standart input;
+stdout - standart output;
+stderr - standart error;
+> - directs input to the file;
+| - the pipe takes the standard output of the command on the left and pipe it as a standard input to the command on the right;
+
+- Using command cat with redirection operator > can rewrite the content of the file with another file.
+- Using command cat with redirection operator > can add the content of one file to another.
+- Using command cat with redirection operator < takes standart output of the file and input it to the programm on the left;
+- Best practice of using uniq command is using sort command and pipe the output of sort to uniq;
+
+<h5>Configuring Command Line</h5>
+
+The enviroment refers to specific settings that can be applyed with editor like nano. Nano is a simple editor that works only with keyboard and very convinient for command line. The current lessons tells about configuring enviroment. ~/.bash_profile is a file used to store enviroment settings. The .bash_profile is a hidden file which CLI identifies and run it. Here in the bash profile you can alias commands by using alias your_command_name="command_name",and set variables for example, change username by using export command and setting USER="your name", command prompts can be change by using export and setting PS1="whatever_you_want" etc. The changes will be able in the current session already after you run source ~/.bash_profile. Source command allows to run command in current session.
+
+source - uses for bash profile file and allows to configure the file in current session;
+clear - cleans up the command line;
+history - shows command history in the command line;
+date - shows current date;
+head - shows begginig of a file or piped data;
+less - the same as cat but works better for large files;
+-N option - shows line number;
+env - stands for enviroment and returns the current variables settings (PATH, PWD, PS1, HOME, USER etc);
+env | grep VAR - returns piped enviroment with needed variable;
+
+nano commands:
+cntrl + o - save. where o stands for output;
+cntrl + x - exit, where x  stands for exit;
+cntrl + g - opens help menu;
+
+Vasiables in .bash_profile:
+
+PATH - shows the list of directories separated by a colon;
+HOME - the home directory;
+USER - name of the current user;
+PS1 - the command prompt;
+LESS - variable for less command
+
+More commands <a href="https://www.codecademy.com/articles/command-line-commands">here</a>
+
+<h5>Scripting</h5
+    
+Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the ~/bin/ directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to PATH=~/bin:$PATH.
+
+Variables in your file can be initialize just by adding them like this variable="value", to access the variable use $ sign, e.g. $variable_name. Conditions have a specific syntax. The if statement starts with if then in square brackets [] conditions are set, and then command runs in new line, after runs else construction and statement ends with fi. More about specific syntax with option:
+
+-eq - equal;
+-ne - not equal;
+-lt - less than;
+-gt - greater than;
+-le - less or equal;
+-ge - greater or equal;
+-z - null;
+
+To compare strings use qoutes while accessing the variable like this "$variable_name". It prevents syntax errors. For strings works syntax == - means equal and != - menas not equal. While echo your variables you don't need qoutes.
+
+Loops are provided with three operators: while, for and until.
+For - good for running through the list and execute command on each step with do operator. For end with done operator. Variable defined in the condition right after for statement like this [varible_name -option $another variable] for variable in $another_variable (list, arrey, etc).
+While and Until are pretty similar in bash. Both of them are looping, but while runs until finds the fitting condition, and until runs until the condition is true. The syntax is pretty the same as for conditions, but end with done statement. The good part is as usual while and until can be replaced by each other like this
+
+while [$variable -lt number]
+do
+some commands
+variable=$((variable + 1))
+done
+
+until [$variable -eq number]
+do
+some commands
+variable=$((variable + 1))
+done
+
+Important! Doing math in bash means using accessor $ before double parahtnesis (()) and inside paranthesis add only variable without accessor sign like this $((variable + 1))
+
+To make an iput add 'read variable' command. It will accept the users input for futher operations. The variable initialization sets the same like in the for loop without accessor $. Another ability to set input is to set it for user to enter it with variable name while running script like variable value1 value2 value3 etc. To use this variables you should use $1 what stands for first value $2 for second etc. If you need the internal number of values set them to $@.
+
+Alias. To shorten the operation we can alias it as we did with commands for command line like this alias command_name="./file_name.sh". More than that, you can use constant variable value for the current alias like this alias command_name="./file_name.sh" "value".
+
+More: head <a href="http://www.linfo.org/head.html">here</a>
