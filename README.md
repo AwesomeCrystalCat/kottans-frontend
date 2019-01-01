@@ -234,6 +234,9 @@ Never thought it's possible to set everything only via keyboard. It makes naviga
 
 ## Git Collaboration
 
+<img src="/task_git_collaboration/github&collab.png" />
+<img src="/task_git_collaboration/vc_wtih_git.png" />
+
 So far it's possible to create two directories parent/child with one command mkdir with -p option and by using && I can collaborate my commands. I haven't think about that before.
 
 Git works as a pager. Who could know that? So when you have a lot of content in a window to scroll down all the content you can use up arrow or K key and down arrow or J key to scroll down. To move half page hit D for down and U for up. To move full page hit F for down and B for up. To quit press Q key.
