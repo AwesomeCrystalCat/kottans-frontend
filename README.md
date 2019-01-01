@@ -100,10 +100,15 @@ It's possible to use another version control systems or clouds.
 List of Git Commands:
 https://git-scm.com/docs
 
+<h3>Summary</h3>
+
+Earlier I thought that Git is used only to for file exchange like a cloud. But following this course I found out that using Git allows to control every step of your workflow. Manipulating history with numerous commands let your own mind keep clear without remembering every detail of your code as I was trying to do before and looking for bug manualy. The second important thing I learnt is commiting. Now I know that the best practice of commiting is a logical chunks that makes the history much more clean and accurate. Fetch, pull and merging aren't so scary words anymore. Conflicts resolving can be even fun^^
 
 ## Linux CLI, and HTTP
 
 # Learn the Command Line (Codecademy course)
+
+<img src="/task_linux_cli/codecademy_cli.png" />
 
 Command Line is a way of navigation, managing derictories and running files by using keyboard only. What is much convinient and faster especially after Typing course:) Configuring CLI for your personal usage can be very helpful during workflow. One of the most popular opensource CLI is Bash what stands for Bourne-Again-Shell named for it's creator Bourne and the word game in the same time. Here are some most usable commands, that were uncovered in Codecademy course for CLI:
 
@@ -174,9 +179,9 @@ LESS - variable for less command
 
 More commands <a href="https://www.codecademy.com/articles/command-line-commands">here</a>
 
-<h5>Scripting</h5
+<h5>Scripting</h5>
     
-Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the ~/bin/ directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to PATH=~/bin:$PATH.
+Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the "~/bin/" directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to "PATH=~/bin:$PATH".
 
 Variables in your file can be initialize just by adding them like this variable="value", to access the variable use $ sign, e.g. $variable_name. Conditions have a specific syntax. The if statement starts with if then in square brackets [] conditions are set, and then command runs in new line, after runs else construction and statement ends with fi. More about specific syntax with option:
 
@@ -213,3 +218,63 @@ To make an iput add 'read variable' command. It will accept the users input for 
 Alias. To shorten the operation we can alias it as we did with commands for command line like this alias command_name="./file_name.sh". More than that, you can use constant variable value for the current alias like this alias command_name="./file_name.sh" "value".
 
 More: head <a href="http://www.linfo.org/head.html">here</a>
+
+<h5>HTTP</h5>
+
+HTTP stands for Hypertext Transfer Protocol, it's a stateless protocol what allows to make request-respond pair quik and lightweight. The communication set by using TCP/IP (Transmission Control Protocol/Internet Protocol) what includes three important ingredients: URL (Uniform Recourse Locator), verb and status. URL is kind of a a path to the server according to request and containes protocol, host, port, resource path, query. Verbs are keywords to operate server. Status is a server answer to the request.
+
+First of all client and server must set the connection. After connection is estebished client can send a request to server. Every request should include starter line, header and message body (not important). Server parses the request and creates a respond to send it back to client. Status helps to form the message.
+
+Dammit! it's soooooo hard-to-understand:(
+
+<h5>Summary</h5>
+
+Never thought it's possible to set everything only via keyboard. It makes navigation and operations easy and quick. The best part was bash_profile. Alias, setting variables is very amusing and allows to customize everything in bash.
+
+
+## Git Collaboration
+
+So far it's possible to create two directories parent/child with one command mkdir with -p option and by using && I can collaborate my commands. I haven't think about that before.
+
+Git works as a pager. Who could know that? So when you have a lot of content in a window to scroll down all the content you can use up arrow or K key and down arrow or J key to scroll down. To move half page hit D for down and U for up. To move full page hit F for down and B for up. To quit press Q key.
+
+Recall for previous course. git log --oneline shows history in short format.
+
+Git log --stat (--stat for statistics) gives more information about changes that were made.
+
+More fun with flags! git log --patch or git log -p shows all changes of each file. But it takes a lot of space and not really convinient.
+
+If you want to add all files at once use git add . command where . refers to the current directory with all files and directories with their content. If you added some files you didn't want to stage you can run git rm --cached <file_name>. Or you can use magic .gitignore. Add files you want to be ignored by git.
+
+.gitignore magic. Using this feature on command line is much more efficient, imho. well, as you know, adding name of the file or a folder to this file will be ignored by git and won't display at your working area. One more useful tip is globbing. "#" - marks line as a comment, "*" - is 42 or 0 or more symbols, "?" - for one symbol, "[abc]" - matches a, b, or c, "** " - nested directories, like that "folder / ** / file_name". One astrix can be used for one-level folders. To make one of the same extension file not ignored use "!" before file name like this !file_name.ext. You can also choose one file from the directory to be ignored, not all the directory by adding this file like this /file_name.ext. To ignore file with the same name in all the directories you have type file_name/.
+
+Tagged commits works the same as sha, it's a great helper since you just follow the tag to checkout the needed version. To add tag you need to run git tag -a tag_name and add a comment in the editor and the latest commit will be tagged. To tag earlier commit run it tag -a tag_name commit_sha. To delete a tag run git tag -d tag_name where -d stands for delete. 
+
+Voala! Branches works the same as tags do! You can attach new branch to the specific commit by running git branch branch_name commit_sha. The same for deletion. Use -D to force deletion. To add branch with checkout command use git checkout -b branch_name.
+
+New about git log. To expose all branches add --all flag to the git log command.
+
+If you've forgotten to add file to commit or you have to fix smth related to last commit then you can use git commit --amend for the last file and it will automatically added to your commit after you add a comment.
+
+One more feature is reverting commits. In case you want to make changes of the last commit back you can use get revert commit_sha. and your last commit will be reverted. For example, if you deleted a line and commited it git revert command will bring th3e deleted line back. Attention! Tricks with revert can cause conflicts.
+
+You already know, but here's a reminder to delete a commit use command git reset --hard HEAD^ for last commit and git reset --hard HEAD~number to delete the n-th parent commit. New thing is flag --mixed which is the default flag in the same time and it returns commit to the working directory with both commands git reset HEAD^ or git reset --mixed HEAD^, other words your changes will be unstaged. Command git reset --soft HEAD^ will return commit to the staging area and you can commit it back anytime but with appropriate timestamp.
+Pro tip: before you doing any type of reset just for case run git branch backup to make reset more safe. after needed changes you can merge backup branch into master.
+
+Deleted everything on the Earth in your repo? No worries run git reflog command. It saves all the history of your commits for a while. By adding --all flag you will see more detailed history.
+
+GitHub is a remote server to save and share repositories. To add the remote repository use command git remote add remote_shortname remote_link. For remote shortname is usualy used name origin, but you can call it as you wish by adding the name while typing command. Then run git remote -v to verify your remote server.
+
+After you made a commit you probably want to share or push your files to the remote. You can do it by typing git push -u remote_shortname branch_name, e .g. git push -u origin master. The opposit command is git pull. It wroks the same way as git push do but takes the changes from the remote and pull it to your computer. Commands is similar too: git pull remote_shortname branch_name. If you have changes on the both local and remote repositories that can cause a conflict good idea to run git fetch. It's kind of half git pull command. It works this way: git fetch remote_shortname branch_name and makes only your local origin/master up-to-date while your local master still stays without changes. Later you can fast-forward merge it. The same story if you have two different commits that can be self erased while pulling. Better idea to do git fetch and after merge both branches origin/master and master. Don't forget to push your changes to remote to keep it up-to-date.
+
+git shortlog displays an alphabetical list of names and the commit messages that go along with them. If you just want to see just the number of commits that each developer has made, you can add a couple of flags: -s to show just the number of commits (rather than each commit's message) and -n to sort them numerically (rather than alphabetically by author name).
+
+If your project is full of developers and you need to find out which commits were made by the exact autor run git log --author=name. If name contains two or more words in this case use quotes git log --author="name surname" to avoid error.
+
+You can use git --grep indicator or git --grep=indicator (the situation with two or more words is pretty the same) to find all commits with the specific indicator e. g. git --grep=bug will find all commits with "bug" in the description.
+
+While working with the forked repository on your local repo you can still keep all file up-to-date with the original repository by following it. To do it you need to hit a star on the page of the original repo and hit watching. To pull last commits from original repository you have to add one more repo that usually called upstream, but the name still can be absolutely everything. Dapends on your amigination. To do it run command: git remote upstream original_repo_url. After running varification git remote -v you will see new remote repository. If you want you can rename your local remote repo by running git remote rename old_name new_name.
+
+To get the latest changes from the original repo just run git fetch original_repo_shortname branch_name.
+
+If your pull request was asked to be updated usually you should make the rebase. If you afraid to do a mistake it's actually ok, so you can just make git backup for the current branch. After you can start a rebase by running git rebase -i HEAD~number_of_commits_to_rebase, where -i stands for interactive what gives you numerous hints how to make rebase more painless. After you run the command you wiil be promted to the editor where you can choose the role of each commit. Squashing is actually something like merging commits into one. So you should put a s indicator what stands for squashing to all commits that a child and r that stands for rewrard to change the commit message. After you will be promted to editor again where you can add a comment. After you have to push your newmade rebased commit to the original remote to finish pull request. Server will not allow to do that, so you should run git push -f original_remote_shortname branch_name where -f stands for force. After you will see that commit history had been changed on the original repository page.
