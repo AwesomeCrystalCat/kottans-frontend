@@ -139,17 +139,21 @@ Using * (which stands for 42 in the ASCII tables) means you can replace the astr
 
 Pro tip: to make your operation quiklier you can type only begginig of the name then push Tab button for autofilling;
 
-stdin - standart input;
-stdout - standart output;
-stderr - standart error;
-> - directs input to the file;
-| - the pipe takes the standard output of the command on the left and pipe it as a standard input to the command on the right;
+<ul>
+    <li>stdin - standart input;</li>
+    <li>stdout - standart output;</li>
+    <li>stderr - standart error;</li>
+    <li>> - directs input to the file;</li>
+    <li>| - the pipe takes the standard output of the command on the left and pipe it as a standard input to the command on the right;</li>
+</ul>
 
-- Using command cat with redirection operator > can rewrite the content of the file with another file.
-- Using command cat with redirection operator > can add the content of one file to another.
-- Using command cat with redirection operator < takes standart output of the file and input it to the programm on the left;
-- Best practice of using uniq command is using sort command and pipe the output of sort to uniq;
-
+<ul>
+    <li>Using command cat with redirection operator > can rewrite the content of the file with another file.</li>
+    <li>Using command cat with redirection operator > can add the content of one file to another.</li>
+    <li>Using command cat with redirection operator < takes standart output of the file and input it to the programm on the left;</li>
+    <li>Best practice of using uniq command is using sort command and pipe the output of sort to uniq;</li>
+</ul>
+    
 <h5>Configuring Command Line</h5>
 
 The enviroment refers to specific settings that can be applyed with editor like nano. Nano is a simple editor that works only with keyboard and very convinient for command line. The current lessons tells about configuring enviroment. ~/.bash_profile is a file used to store enviroment settings. The .bash_profile is a hidden file which CLI identifies and run it. Here in the bash profile you can alias commands by using alias your_command_name="command_name",and set variables for example, change username by using export command and setting USER="your name", command prompts can be change by using export and setting PS1="whatever_you_want" etc. The changes will be able in the current session already after you run source ~/.bash_profile. Source command allows to run command in current session.
@@ -181,7 +185,7 @@ More commands <a href="https://www.codecademy.com/articles/command-line-commands
 
 <h5>Scripting</h5>
     
-Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the "~/bin/" directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to "PATH=~/bin:$PATH".
+<p>Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the "~/bin/" directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to "PATH=~/bin:$PATH".</p>
 
 Variables in your file can be initialize just by adding them like this variable="value", to access the variable use $ sign, e.g. $variable_name. Conditions have a specific syntax. The if statement starts with if then in square brackets [] conditions are set, and then command runs in new line, after runs else construction and statement ends with fi. More about specific syntax with option:
 
