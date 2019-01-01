@@ -234,8 +234,8 @@ Never thought it's possible to set everything only via keyboard. It makes naviga
 
 ## Git Collaboration
 
-<img src="/task_git_collaboration/github&collab.png" />
-<img src="/task_git_collaboration/vc_wtih_git.png" />
+<img width="300" height="auto" src="/task_git_collaboration/github&coolab.png" />
+<img width="300" height="auto" src="/task_git_collaboration/vc_wtih_git.png" />
 
 So far it's possible to create two directories parent/child with one command mkdir with -p option and by using && I can collaborate my commands. I haven't think about that before.
 
