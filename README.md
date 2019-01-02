@@ -292,6 +292,10 @@ The best part of course is magic of git ingorse and command line. Adore this col
 
 ## Intro to HTML and CSS
 
+<img width="600" src="/task_html_css_intro/html_udacity.png" />
+<img width="600" src="/task_html_css_intro/html_htmlacademy.png" />
+<img width="600" src="/task_html_css_intro/css_htmlacademy.png" />
+
 <p>&lt;figure&gt; is a element that allows to add the image when you have no copyright for using it. You can also add a &lt;figcaption&gt; tag to make give short description and add a link to the source.</p>
 
 <p>There are 16777216 colors</p>
