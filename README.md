@@ -349,3 +349,6 @@ The best part of course is magic of git ingorse and command line. Adore this col
 <p>clear property in CSS allows to clear an inhereted float property for the element with values both for both left and right, right only for right, left only for left, inherit will be unherited, initial will be set to the default and none for no value.</p>
 
 <p>Selector by type good for input fields since allattributows to appeal to the attribute of the tag. To declare the selector use class_name[attribute_name] or class_name[type="value"].</p>
+
+<h5>Summary</h5>
+Since I familiar with html and css a little bit it wasn't much informative. But practice makes perfection. Discovering is forms and inputs. Very powerful tags for interactive resources. Tables aren't that ineteresting, but gives more understanding about how html works.
