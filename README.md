@@ -139,17 +139,21 @@ Using * (which stands for 42 in the ASCII tables) means you can replace the astr
 
 Pro tip: to make your operation quiklier you can type only begginig of the name then push Tab button for autofilling;
 
-stdin - standart input;
-stdout - standart output;
-stderr - standart error;
-> - directs input to the file;
-| - the pipe takes the standard output of the command on the left and pipe it as a standard input to the command on the right;
+<ul>
+    <li>stdin - standart input;</li>
+    <li>stdout - standart output;</li>
+    <li>stderr - standart error;</li>
+    <li>> - directs input to the file;</li>
+    <li>| - the pipe takes the standard output of the command on the left and pipe it as a standard input to the command on the right;</li>
+</ul>
 
-- Using command cat with redirection operator > can rewrite the content of the file with another file.
-- Using command cat with redirection operator > can add the content of one file to another.
-- Using command cat with redirection operator < takes standart output of the file and input it to the programm on the left;
-- Best practice of using uniq command is using sort command and pipe the output of sort to uniq;
-
+<ul>
+    <li>Using command cat with redirection operator > can rewrite the content of the file with another file.</li>
+    <li>Using command cat with redirection operator > can add the content of one file to another.</li>
+    <li>Using command cat with redirection operator < takes standart output of the file and input it to the programm on the left;</li>
+    <li>Best practice of using uniq command is using sort command and pipe the output of sort to uniq;</li>
+</ul>
+    
 <h5>Configuring Command Line</h5>
 
 The enviroment refers to specific settings that can be applyed with editor like nano. Nano is a simple editor that works only with keyboard and very convinient for command line. The current lessons tells about configuring enviroment. ~/.bash_profile is a file used to store enviroment settings. The .bash_profile is a hidden file which CLI identifies and run it. Here in the bash profile you can alias commands by using alias your_command_name="command_name",and set variables for example, change username by using export command and setting USER="your name", command prompts can be change by using export and setting PS1="whatever_you_want" etc. The changes will be able in the current session already after you run source ~/.bash_profile. Source command allows to run command in current session.
@@ -181,7 +185,7 @@ More commands <a href="https://www.codecademy.com/articles/command-line-commands
 
 <h5>Scripting</h5>
     
-Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the "~/bin/" directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to "PATH=~/bin:$PATH".
+<p>Scripting allows to write fitsystem presets and commands to execute every time termnal is opened. This file must have a .sh extension to run them with bash. To make system understand it better in the very top of document run #!/bin/bash, as a result system will use bash interpreter to run the code below this line. Script file should be placed in the "~/bin/" directory and have execute permisin, which can be provided by running change mode command chmod with an -x option what stands for execute and the name of the file chmod -x filename.sh. To make your script file run from anywhere, not only from his parent directory change the PATH variable to "PATH=~/bin:$PATH".</p>
 
 Variables in your file can be initialize just by adding them like this variable="value", to access the variable use $ sign, e.g. $variable_name. Conditions have a specific syntax. The if statement starts with if then in square brackets [] conditions are set, and then command runs in new line, after runs else construction and statement ends with fi. More about specific syntax with option:
 
@@ -234,6 +238,9 @@ Never thought it's possible to set everything only via keyboard. It makes naviga
 
 ## Git Collaboration
 
+<img width="600" height="auto" src="/task_git_collaboration/github&coolab.png" />
+<img width="600" height="auto" src="/task_git_collaboration/vc_wtih_git.png" />
+
 So far it's possible to create two directories parent/child with one command mkdir with -p option and by using && I can collaborate my commands. I haven't think about that before.
 
 Git works as a pager. Who could know that? So when you have a lot of content in a window to scroll down all the content you can use up arrow or K key and down arrow or J key to scroll down. To move half page hit D for down and U for up. To move full page hit F for down and B for up. To quit press Q key.
@@ -278,3 +285,63 @@ While working with the forked repository on your local repo you can still keep a
 To get the latest changes from the original repo just run git fetch original_repo_shortname branch_name.
 
 If your pull request was asked to be updated usually you should make the rebase. If you afraid to do a mistake it's actually ok, so you can just make git backup for the current branch. After you can start a rebase by running git rebase -i HEAD~number_of_commits_to_rebase, where -i stands for interactive what gives you numerous hints how to make rebase more painless. After you run the command you wiil be promted to the editor where you can choose the role of each commit. Squashing is actually something like merging commits into one. So you should put a s indicator what stands for squashing to all commits that a child and r that stands for rewrard to change the commit message. After you will be promted to editor again where you can add a comment. After you have to push your newmade rebased commit to the original remote to finish pull request. Server will not allow to do that, so you should run git push -f original_remote_shortname branch_name where -f stands for force. After you will see that commit history had been changed on the original repository page.
+
+<h5>Summary</h5>
+
+The best part of course is magic of git ingorse and command line. Adore this collaboration. Will use it in the future for sure. Hightlighting of collaborative work on github helps to understand that you won't brake anything if you start collaborate with somebody, so you can be more confident in using GitHub and forking projects.
+
+## Intro to HTML and CSS
+
+<p>&lt;figure&gt; is a element that allows to add the image when you have no copyright for using it. You can also add a &lt;figcaption&gt; tag to make give short description and add a link to the source.</p>
+
+<p>There are 16777216 colors</p>
+
+<p>Description list includes tags &lt;dl&gt; - for list, &lt;dt&gt; - for the define term/name and &lt;dd&gt; - for define description.</p>
+
+<p>&lt;blockqoute&gt; tag is great for long fragment of quoted text, even paragraphs. &lt;q&gt; tag works with short quotes inside of the text and decorets with qoutes " automatically. &lt;cite&gt; tag is used for quote sorces or the name of the author.</p>
+
+<p>If you need to work with algebra or other formulas you should try Math Markup Language. It works like HTML but work based on XML files.</p>
+
+<p>Tags &lt;del&gt; and &lt;ins&gt; are used for computing and to understand what text was deleted and what was is inserted approximately.</p>
+
+<p>&lt;pre&gt; is a tag that spaces in code snippet since they don't in general.</p>
+
+<p>&lt;mark&gt; tag used to highlight the text with yellow background by default.</p>
+
+<p>While adding a link you can also use attribute title which gives a popup hint when the link is hovered.</p>
+
+<p>&lt;table&gt; tag allows to create a table. To add a row use tag &lt;tr&gt; that stands for table row, and to add a cell add &lt;td&gt; that stands for table data. Also you can use tag &lt;th&gt; to add table header cells. To add a table heading use &lt;caption&gt; tag inside of the &lt;table&gt; tag in the very top. You can place your table heading anywhere you want by using caption-side CSS property with values top or bottom to move it up and down, to place it left, center or right use text-align property appropriatly.</p>
+
+<p>You can create a border in the table by adding the border attribute with a numeral line weight to the &lt;table&gt; tag. But for better practice set border with CSS. To make border more accurate add in your CSS file border-collapse with value collapse to the table selector or the appropriate class. To make cell spacing regular apply value separate for border-collapse since you can't edit border-spacing value if it's needed in the CSS file to make cell outer space. You can set cellspacing as a attribute in the &lt;table&gt; tag, but it's defenetly isn't the best practice. Also with attribute cellpadding in the &lt;table&gt; tag you can add an inner padding of the cells. But of course it's better to use CSS</p>
+
+<p>To collapse cells in the row you should use attribute colspan and a numeric value, e.g. setting colspan="2" to &lt;td&gt; or &lt;th&gt; tags will expand the cell one more cell on the right, so the width of the cell will be equal to 2 columns. Notice that if you applied colspan in the existing table oyou should delete the existing unwanted cells of the row.</p>
+
+<p>To collapse cells in the column use rowspan attribute. It works the same as a colspan attribute but from top to bottom.In this case extra cells will create a new r=column on the right, so they should be deleted as well.</p>
+
+<p>To align the content of the table you can use text-align property with values left, center or right and vertical-align property to align content top, middle, bottom with the appropriate values.</p>
+
+<p>Forms in html are extremely useful. Tag &lt;form&gt; takes two important attributes: action for setting URL and method to sets sending method. By default method in html set to get. This method gets a query and is visible in the URL after ? symbol. One more method for the form is post which allows to post values.</p>
+
+<p>To create the input you can use &lt;input&gt; tag inside of the &lt;form&gt; tag. &lt;input&gt; takes two important attributes: type which shows the type on the field e.g. number, text, submit, radio, file, checkbox, password or hidden value and name that sets the name of the field. One more attribute for input is value which to set the signification of the field as a default..</p>
+
+<p>To set a label for the input you can use &lt;label&gt; tag. It's better practice, because it creates the logical connection between input and label and when you clicking on the label input is acrivated. First way to do it is to put input inside of the &lt;label&gt; tag. If it's impossible to set label as a parent of input, you can use attribute for in &lt;label&gt; tag with the referance to id of the &lt;input&gt; tag, so they will be connected.</p>
+
+<p>To change the value of the password field to the hidden symbols use type attribute with password value.</p>
+
+<p>To create a submit button we also use &lt;input&gt; tag with type attribute with submit value. To name your button use value attribute. If there are few different buttons use the name attribute to make server understand which exactly button was actioned.</p>
+
+<p>If you have to create a miltiple input field you should use &lt;textarea&gt; tag with attribute name to make it unique for server, id to make it unique for user, rows and cols attribute will sett the width and height of the textarea. But textarea has no value attribute. To set the value you should write the appropriate text inside of the &lt;textarea&gt; tag</p>
+
+<p>To create a checkbox fields create &lt;input&gt; tag with the type checkbox. It has a boolean value and it's not important to set the value. To make the checkbox checked by default add checked attribute to the &lt;input&gt; tag. If there are few checkboxes they require different name attribute.</p>
+
+<p>To create radiobuttons use &lt;input&gt; tag with type atrribute radio. Notice, the name as well as an id attribute for radiobutton group must be the same and values must be different. For the checked radio by default use checked attribute. Nest each inputs for radiobuttons in the unique &lt;label&gt; tag.</p>
+
+<p>Select list can be created by using &lt;select&gt; tag with attributes name and id. Nest inside of the &lt;select&gt; tag multiple &lt;option&gt; tag. The attribute value for &lt;option&gt; tag must contain the value of the answer and the label of the option is nest inside of the &lt;option&gt; tag. Setting value is crucial for &lt;option&gt;, because otherwise the text inside the tag will be sent to server. To make your select multiple add the attribute multiple to the &lt;select&gt; tag. Choose multiple can be performed by tapping cntrl or cmnd key on the keybord and clicking on the selects with mouse. Attribute size can set height of &lt;select&gt; tag. To choose selected by default add to the &lt;option&gt; tag selected value. To make select properly on the backend side set name attribute with square brackets after its value like this value[].</p>
+
+<p>Download field can be performed by setting type attribute with file value in the &lt;input&gt; tag. The important attribute for this type of input is name attribute. To make download field work you must add to the &lt;form&gt; tag attribute enctype with the value multipart/form-data.</p>
+
+<p>To make your field hidden use &lt;input&gt; tag with the type attribute hidden.</p>
+
+<p>clear property in CSS allows to clear an inhereted float property for the element with values both for both left and right, right only for right, left only for left, inherit will be unherited, initial will be set to the default and none for no value.</p>
+
+<p>Selector by type good for input fields since allattributows to appeal to the attribute of the tag. To declare the selector use class_name[attribute_name] or class_name[type="value"].</p>
