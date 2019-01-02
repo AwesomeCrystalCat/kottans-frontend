@@ -289,3 +289,59 @@ If your pull request was asked to be updated usually you should make the rebase.
 <h5>Summary</h5>
 
 The best part of course is magic of git ingorse and command line. Adore this collaboration. Will use it in the future for sure. Hightlighting of collaborative work on github helps to understand that you won't brake anything if you start collaborate with somebody, so you can be more confident in using GitHub and forking projects.
+
+## Intro to HTML and CSS
+
+<p>&lt;figure&gt; is a element that allows to add the image when you have no copyright for using it. You can also add a &lt;figcaption&gt; tag to make give short description and add a link to the source.</p>
+
+<p>There are 16777216 colors</p>
+
+<p>Description list includes tags &lt;dl&gt; - for list, &lt;dt&gt; - for the define term/name and &lt;dd&gt; - for define description.</p>
+
+<p>&lt;blockqoute&gt; tag is great for long fragment of quoted text, even paragraphs. &lt;q&gt; tag works with short quotes inside of the text and decorets with qoutes " automatically. &lt;cite&gt; tag is used for quote sorces or the name of the author.</p>
+
+<p>If you need to work with algebra or other formulas you should try Math Markup Language. It works like HTML but work based on XML files.</p>
+
+<p>Tags &lt;del&gt; and &lt;ins&gt; are used for computing and to understand what text was deleted and what was is inserted approximately.</p>
+
+<p>&lt;pre&gt; is a tag that spaces in code snippet since they don't in general.</p>
+
+<p>&lt;mark&gt; tag used to highlight the text with yellow background by default.</p>
+
+<p>While adding a link you can also use attribute title which gives a popup hint when the link is hovered.</p>
+
+<p>&lt;table&gt; tag allows to create a table. To add a row use tag &lt;tr&gt; that stands for table row, and to add a cell add &lt;td&gt; that stands for table data. Also you can use tag &lt;th&gt; to add table header cells. To add a table heading use &lt;caption&gt; tag inside of the &lt;table&gt; tag in the very top. You can place your table heading anywhere you want by using caption-side CSS property with values top or bottom to move it up and down, to place it left, center or right use text-align property appropriatly.</p>
+
+<p>You can create a border in the table by adding the border attribute with a numeral line weight to the &lt;table&gt; tag. But for better practice set border with CSS. To make border more accurate add in your CSS file border-collapse with value collapse to the table selector or the appropriate class. To make cell spacing regular apply value separate for border-collapse since you can't edit border-spacing value if it's needed in the CSS file to make cell outer space. You can set cellspacing as a attribute in the &lt;table&gt; tag, but it's defenetly isn't the best practice. Also with attribute cellpadding in the &lt;table&gt; tag you can add an inner padding of the cells. But of course it's better to use CSS</p>
+
+<p>To collapse cells in the row you should use attribute colspan and a numeric value, e.g. setting colspan="2" to &lt;td&gt; or &lt;th&gt; tags will expand the cell one more cell on the right, so the width of the cell will be equal to 2 columns. Notice that if you applied colspan in the existing table oyou should delete the existing unwanted cells of the row.</p>
+
+<p>To collapse cells in the column use rowspan attribute. It works the same as a colspan attribute but from top to bottom.In this case extra cells will create a new r=column on the right, so they should be deleted as well.</p>
+
+<p>To align the content of the table you can use text-align property with values left, center or right and vertical-align property to align content top, middle, bottom with the appropriate values.</p>
+
+<p>Forms in html are extremely useful. Tag &lt;form&gt; takes two important attributes: action for setting URL and method to sets sending method. By default method in html set to get. This method gets a query and is visible in the URL after ? symbol. One more method for the form is post which allows to post values.</p>
+
+<p>To create the input you can use &lt;input&gt; tag inside of the &lt;form&gt; tag. &lt;input&gt; takes two important attributes: type which shows the type on the field e.g. number, text, submit, radio, file, checkbox, password or hidden value and name that sets the name of the field. One more attribute for input is value which to set the signification of the field as a default..</p>
+
+<p>To set a label for the input you can use &lt;label&gt; tag. It's better practice, because it creates the logical connection between input and label and when you clicking on the label input is acrivated. First way to do it is to put input inside of the &lt;label&gt; tag. If it's impossible to set label as a parent of input, you can use attribute for in &lt;label&gt; tag with the referance to id of the &lt;input&gt; tag, so they will be connected.</p>
+
+<p>To change the value of the password field to the hidden symbols use type attribute with password value.</p>
+
+<p>To create a submit button we also use &lt;input&gt; tag with type attribute with submit value. To name your button use value attribute. If there are few different buttons use the name attribute to make server understand which exactly button was actioned.</p>
+
+<p>If you have to create a miltiple input field you should use &lt;textarea&gt; tag with attribute name to make it unique for server, id to make it unique for user, rows and cols attribute will sett the width and height of the textarea. But textarea has no value attribute. To set the value you should write the appropriate text inside of the &lt;textarea&gt; tag</p>
+
+<p>To create a checkbox fields create &lt;input&gt; tag with the type checkbox. It has a boolean value and it's not important to set the value. To make the checkbox checked by default add checked attribute to the &lt;input&gt; tag. If there are few checkboxes they require different name attribute.</p>
+
+<p>To create radiobuttons use &lt;input&gt; tag with type atrribute radio. Notice, the name as well as an id attribute for radiobutton group must be the same and values must be different. For the checked radio by default use checked attribute. Nest each inputs for radiobuttons in the unique &lt;label&gt; tag.</p>
+
+<p>Select list can be created by using &lt;select&gt; tag with attributes name and id. Nest inside of the &lt;select&gt; tag multiple &lt;option&gt; tag. The attribute value for &lt;option&gt; tag must contain the value of the answer and the label of the option is nest inside of the &lt;option&gt; tag. Setting value is crucial for &lt;option&gt;, because otherwise the text inside the tag will be sent to server. To make your select multiple add the attribute multiple to the &lt;select&gt; tag. Choose multiple can be performed by tapping cntrl or cmnd key on the keybord and clicking on the selects with mouse. Attribute size can set height of &lt;select&gt; tag. To choose selected by default add to the &lt;option&gt; tag selected value. To make select properly on the backend side set name attribute with square brackets after its value like this value[].</p>
+
+<p>Download field can be performed by setting type attribute with file value in the &lt;input&gt; tag. The important attribute for this type of input is name attribute. To make download field work you must add to the &lt;form&gt; tag attribute enctype with the value multipart/form-data.</p>
+
+<p>To make your field hidden use &lt;input&gt; tag with the type attribute hidden.</p>
+
+<p>clear property in CSS allows to clear an inhereted float property for the element with values both for both left and right, right only for right, left only for left, inherit will be unherited, initial will be set to the default and none for no value.</p>
+
+<p>Selector by type good for input fields since allattributows to appeal to the attribute of the tag. To declare the selector use class_name[attribute_name] or class_name[type="value"].</p>
