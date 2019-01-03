@@ -352,3 +352,27 @@ The best part of course is magic of git ingorse and command line. Adore this col
 
 <h5>Summary</h5>
 Since I familiar with html and css a little bit it wasn't much informative. But practice makes perfection. Discovering is forms and inputs. Very powerful tags for interactive resources. Tables aren't that ineteresting, but gives more understanding about how html works.
+
+## Responsive Web Design
+
+<p>The pixel is npt always the pixel! Device Independant Pixels (dip) is a browser measurement that relates pixel to a real distance and usualy a half of pixels of a device. That means that hardware pixels of device aren't the same as a browser pixels.</p>
+
+<p>Font boosting is an ability of font to be fitable for a device and make the content readable.</p>
+
+<p>Setting resposibility starts with setting a &lt;meta&gt; tag on the &lt;head&gt; section. Add an attribute name with the value viewport and set it's content attribute to the value width=device-width,initial-scale=1. It refers the CSS pixels to dip pixels in proportion 1:1 and match device with ro the device independant pixels. So the page will be reflowed to match the size of the screen.</p>
+
+<p>To prevent oversizing the content set the width in relative units and set the value of the property max-width: 100% for img, embed, video and object. In this case content will fit the width of the device.</p>
+
+<p>Fun fact! Fingers are nearly 10mm width what is equal to 40 CSS pixels. So keep in mind that it's a good practice to make interactive elements big enogh to make it comfortable for even big fingers. Make your element at least 48x48 pixels and make enoght room around the element 40x40 pixels to prevent mistakes in users experience.</p>
+
+<p>Design and code from small to large!</p>
+
+<p>One more <del>and probably more accurate</del> way to apply media queries is to use different CSS files for different device width styling and set the media query as the value of an attribute media in the &lt;link&gt; tag while adding new CSS stylesheet in the head section of your html. Example: &lt;link rel="stylesheet" media="screen and (min-width: 350px)" href="app350.css"&gt;</p>
+
+<p><ins>No, making a lot of files isn't good idea, since it take a lot of queries. So continue writing media queries as usual @media screen and (min-width: 350px) in your CSS file.</ins></p>
+
+<p>Cool idea for flexbox, while using a shifting model of the content layout. If you want to change the order of the block apply value -1 to order property since all blocks have a default value of 0 the block will move one step left. To move the block forwars use the 1 value for order property.</p>
+
+<h5>Summary</h5>
+
+<p>Recall issue about forgetting to add &lt;meta&gt; tag to the webpage to avoid struggeling "why a heck doesn't it work properly?" Good idea to learn more interesting layouts for webpages. Favorite are a content shifting and mostly liquid models. Never thought that starting with smaller device is better idea, but it is. Making table displayed as block for small device seems not really good desicion since it takes a lot scrooling down. Anyway the best is to remake the table content appropriate to each resolution. Order! Order:-1 was a great discovering. And playing with frogs is much amusing.</p>
