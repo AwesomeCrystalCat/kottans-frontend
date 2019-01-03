@@ -354,6 +354,8 @@ The best part of course is magic of git ingorse and command line. Adore this col
 Since I familiar with html and css a little bit it wasn't much informative. But practice makes perfection. Discovering is forms and inputs. Very powerful tags for interactive resources. Tables aren't that ineteresting, but gives more understanding about how html works.
 
 ## Responsive Web Design
+<img width="600" src="/task_responsive_web_design/responsive_udacity.png" />
+<img width="600" src="/task_responsive_web_design/frogs.png" />
 
 <p>The pixel is npt always the pixel! Device Independant Pixels (dip) is a browser measurement that relates pixel to a real distance and usualy a half of pixels of a device. That means that hardware pixels of device aren't the same as a browser pixels.</p>
 
