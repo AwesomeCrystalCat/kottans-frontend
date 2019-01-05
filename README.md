@@ -438,3 +438,6 @@ Since I familiar with html and css a little bit it wasn't much informative. But 
 <p>Splice() method takes an index when you want to change the array as a first parameter, the second parameter is how many elements starting from this point you want to remove, all the last parameters are items you want to pass to the array. Example: arr=["one", "nine", "four"]; arr.splice(1, 1, "two", "three"); arr=["one", "two", "three", "four"]; this method returns the deleted element, in this exemple is returns "nine";</p>
 
 <p>Loops in array allows to modify each element in the array. The forEach() method wich takes function() as a parameter and element, index or array and works wich each element in the array. This method returns undefined. To return array use map() method which is pretty similar to the previous method.</p>
+
+<h5>Summary</h5>
+Omg, here the hard part starts. Callback functions are something insane, still don't get how do they work. Really a lot about arrays. Never thought they can be multidementional. JavaScript needs more time to understand it.
