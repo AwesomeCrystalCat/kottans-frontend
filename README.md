@@ -378,3 +378,63 @@ Since I familiar with html and css a little bit it wasn't much informative. But 
 <h5>Summary</h5>
 
 <p>Recall issue about forgetting to add &lt;meta&gt; tag to the webpage to avoid struggeling "why a heck doesn't it work properly?" Good idea to learn more interesting layouts for webpages. Favorite are a content shifting and mostly liquid models. Never thought that starting with smaller device is better idea, but it is. Making table displayed as block for small device seems not really good desicion since it takes a lot scrooling down. Anyway the best is to remake the table content appropriate to each resolution. Order! Order:-1 was a great discovering. And playing with frogs is much amusing.</p>
+
+## JS Basics
+
+<p>F=C×1.8+32 is a formula for finding Frenheit from Celcius.</p>
+
+<p>To access the individual charachter of the string you can the index. It works the same as an arrey index, since string is an arrey of charactes. Do it like this value[index] e.g. cat[0] will return c.</p>
+
+<p>To add new line in the string use \n to the string, to make a tabulation add \t to your string</p>
+
+<p>To round the number use the methof toFixed() with an arguement of a number.</p>
+
+<dl>
+    <dh>Falsy values in JavaScipt</dh>
+    <dd>Boolean false</dd>
+    <dd>Undefined</dd>
+    <dd>Null</dd>
+    <dd>Empty string</dd>
+    <dd>0</dd>
+    <dd>NaN</dd>
+</dl>
+
+<dl>
+    <dh>Truthy values in JavaScipt</dh>
+    <dd>Boolean true</dd>
+    <dd>1</dd>
+    <dd>String</dd>
+    <dd>Maassive empty or full</dd>
+    <dd>Object empty or not</dd>
+</dl>
+
+<p>If you need to add a comma in your full number like 1000000 use the toLocaleString([locales [, options]]) method and pass the arguement of the locale ("en-US").</p>
+
+<p>Pay attention not to use "=>". It's math, not programming. For programming right comparison is ">="!</p>
+
+<dl>
+    <dh>x += number (x = x + number)</dh>
+    <dd>x -= number (x = x - number)</dd>
+    <dd>x *= number (x = x * number)</dd>
+    <dd>x /= number (x = x / number)</dd>
+    <dd>x++ or ++x (x = x + 1)</dd>
+    <dd>x-- or --x (y = y - 1)</dd>
+</dl>
+
+<p>Parameter are defines in function and arguements are passed when function is called.</p>
+
+<p>Every value must return a value, if return value is not defined, the function will return undefined; return stops the execution of the function and returns the value.</p>
+
+<p>Shadowing is rewriting variable within the function and rewrites the value on the global level when it's called inside the function. To avoid shadowing you have to declare the samename function inside of the function. In this case variable will be enclosed inside of the function and won't be reached on the global level.</p>
+
+<p>Callback function allows to use a function only once by saving it in the variable and as a result make process more quikly and easily for one time action.</p>
+
+<p>To change the element in hte array you can just reassign it like for arr1=[1, 2, 3, 6, 5] arr[3] = 4 will be arr1=[1, 2, 3, 4, 5]</p>
+
+<p>The push() method returns the number of the elements in array after the element was pushed.</p>
+
+<p>Pop() method don't need a value it's jusr remove the last element of the array and returns the value of the removed element in case you need to use it.</p>
+
+<p>Splice() method takes an index when you want to change the array as a first parameter, the second parameter is how many elements starting from this point you want to remove, all the last parameters are items you want to pass to the array. Example: arr=["one", "nine", "four"]; arr.splice(1, 1, "two", "three"); arr=["one", "two", "three", "four"]; this method returns the deleted element, in this exemple is returns "nine";</p>
+
+<p>Loops in array allows to modify each element in the array. The forEach() method wich takes function() as a parameter and element, index or array and works wich each element in the array. This method returns undefined. To return array use map() method which is pretty similar to the previous method.</p>
