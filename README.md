@@ -381,6 +381,8 @@ Since I familiar with html and css a little bit it wasn't much informative. But 
 
 ## JS Basics
 
+<img src="/task_js_basics/js_basics_udacity.png" />
+
 <p>F=C×1.8+32 is a formula for finding Frenheit from Celcius.</p>
 
 <p>To access the individual charachter of the string you can the index. It works the same as an arrey index, since string is an arrey of charactes. Do it like this value[index] e.g. cat[0] will return c.</p>
